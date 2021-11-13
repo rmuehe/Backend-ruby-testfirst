@@ -69,4 +69,13 @@ describe "#translate" do
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
 
+  it "remains capitalized" do
+    s = translate("Your Mom Is Healthy")
+    expect(s).to eq("Ouryay Ommay Isay Ealthyhay")
+  end
+
+  it "retains punctuation" do
+    s = translate("That's...\"because\" I said so!")
+    expect(s).to eq("At'sthay...\"ecausebay\" Iay aidsay osay!")
+  end
 end
